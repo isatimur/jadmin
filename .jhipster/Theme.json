@@ -1,0 +1,27 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "faq",
+            "otherEntityName": "faq",
+            "otherEntityRelationshipName": "theme"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sort",
+            "fieldType": "Long"
+        }
+    ],
+    "changelogDate": "20160923120305",
+    "entityTableName": "theme",
+    "dto": "mapstruct",
+    "pagination": "pager",
+    "service": "serviceImpl",
+    "angularSuffix": "mySuffix"
+}

@@ -1,0 +1,24 @@
+{
+    "jadminApp": {
+        "theme" : {
+            "home": {
+                "title": "Themes",
+                "createLabel": "Создать новый Theme",
+                "createOrEditLabel": "Создать или отредактировать Theme",
+                "search": "Найти Theme"
+            },
+            "created": "Новый Theme создан с идентификатором {{ param }}",
+            "updated": "Theme обновлен с идентификатором {{ param }}",
+            "deleted": "Theme удален с идентификатором {{ param }}",
+            "delete": {
+                "question": "Вы уверены что хотите удалить Theme {{ id }}?"
+            },
+            "detail": {
+                "title": "Theme"
+            },
+            "name": "Name",
+            "sort": "Sort",
+            "faq": "Faq"
+        }
+    }
+}

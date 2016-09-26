@@ -1,0 +1,56 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myFaqLabel" data-translate="jadminApp.faq.home.createOrEditLabel">Create or edit a Faq</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.faq.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.faq.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="jadminApp.faq.name" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                    ng-model="vm.faq.name"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="jadminApp.faq.questionText" for="field_questionText">Question Text</label>
+            <input type="text" class="form-control" name="questionText" id="field_questionText"
+                    ng-model="vm.faq.questionText"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="jadminApp.faq.answerText" for="field_answerText">Answer Text</label>
+            <input type="text" class="form-control" name="answerText" id="field_answerText"
+                    ng-model="vm.faq.answerText"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="jadminApp.faq.sort" for="field_sort">Sort</label>
+            <input type="number" class="form-control" name="sort" id="field_sort"
+                    ng-model="vm.faq.sort"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label data-translate="jadminApp.faq.theme" for="field_theme">Theme</label>
+            <select class="form-control" id="field_theme" name="theme" ng-model="vm.faq.themeId" ng-options="theme.id as theme.name for theme in vm.themes"            >
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>
